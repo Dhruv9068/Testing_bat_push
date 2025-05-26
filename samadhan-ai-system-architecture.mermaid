@@ -1,0 +1,69 @@
+graph TB
+    subgraph "Frontend Layer"
+        A[React.js Web App]
+        B[Mobile App]
+        C[Admin Dashboard]
+    end
+    
+    subgraph "API Gateway"
+        D[Flask API Gateway]
+        E[Authentication Service]
+        F[Rate Limiting]
+    end
+    
+    subgraph "Core Services"
+        G[Complaint Management Service]
+        H[User Management Service]
+        I[Notification Service]
+        J[Analytics Service]
+    end
+    
+    subgraph "AI/ML Layer"
+        K[LangChain Framework]
+        L[DeepSeek API]
+        M[Sentiment Analysis]
+        N[Text Classification]
+        O[Priority Prediction]
+    end
+    
+    subgraph "Data Layer"
+        P[PostgreSQL Database]
+        Q[Redis Cache]
+        R[File Storage]
+    end
+    
+    subgraph "External Services"
+        S[SMS Gateway]
+        T[Email Service]
+        U[Government APIs]
+    end
+    
+    A --> D
+    B --> D
+    C --> D
+    
+    D --> E
+    D --> F
+    D --> G
+    D --> H
+    D --> I
+    D --> J
+    
+    G --> K
+    H --> K
+    I --> K
+    J --> K
+    
+    K --> L
+    K --> M
+    K --> N
+    K --> O
+    
+    G --> P
+    H --> P
+    I --> Q
+    J --> P
+    
+    I --> S
+    I --> T
+    G --> U

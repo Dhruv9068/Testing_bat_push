@@ -1,0 +1,27 @@
+graph TD
+    A[Citizen Complaint Input] --> B{Input Type?}
+    
+    B -->|Voice| C[Speech-to-Text Conversion]
+    B -->|Text| D[Text Preprocessing]
+    
+    C --> D
+    D --> E[Language Detection]
+    E --> F[Translation to English]
+    F --> G[LangChain Processing]
+    
+    G --> H[DeepSeek API Analysis]
+    
+    H --> I[Sentiment Analysis]
+    H --> J[Category Classification]
+    H --> K[Priority Prediction]
+    H --> L[Department Routing]
+    
+    I --> M[Generate Summary]
+    J --> M
+    K --> M
+    L --> M
+    
+    M --> N[Store in Database]
+    N --> O[Notify Relevant Department]
+    O --> P[Send Confirmation to Citizen]
+    

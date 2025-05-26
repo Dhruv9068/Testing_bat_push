@@ -1,0 +1,41 @@
+graph TB
+    subgraph "Security Layers"
+        A[WAF - Web Application Firewall]
+        B[API Gateway Security]
+        C[Authentication & Authorization]
+        D[Data Encryption]
+        E[Database Security]
+    end
+    
+    subgraph "Authentication Methods"
+        F[JWT Tokens]
+        G[OAuth 2.0]
+        H[Two-Factor Authentication]
+        I[Biometric Verification]
+    end
+    
+    subgraph "Data Protection"
+        J[AES-256 Encryption]
+        K[TLS/SSL Communication]
+        L[Data Anonymization]
+        M[Audit Logging]
+    end
+    
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    
+    C --> F
+    C --> G
+    C --> H
+    C --> I
+    
+    D --> J
+    D --> K
+    D --> L
+    D --> M
+    
+    style A fill:#ff0000
+    style C fill:#ff9933
+    style D fill:#138808

@@ -1,0 +1,26 @@
+graph TD
+    A[Complaint Submitted] --> B[AI Analysis & Classification]
+    B --> C[Auto-Assignment to Department]
+    C --> D[Department Review]
+    
+    D --> E{Complaint Valid?}
+    E -->|Yes| F[Assign to Officer]
+    E -->|No| G[Mark as Invalid/Spam]
+    
+    F --> H[Investigation Started]
+    H --> I[Field Verification]
+    I --> J[Action Taken]
+    J --> K[Resolution Implemented]
+    K --> L[Citizen Feedback]
+    
+    L --> M{Satisfied?}
+    M -->|Yes| N[Case Closed]
+    M -->|No| O[Escalate/Reopen]
+    
+    G --> P[Notify Citizen]
+    O --> F
+    
+    style B fill:#ff9933
+    style F fill:#138808
+    style N fill:#00ff00
+    style G fill:#ff0000
