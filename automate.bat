@@ -1,5 +1,4 @@
 @echo off
-cd /d "C:\Path\To\Your\Project"  :: Replace with your local folder path
 
 echo Initializing Git repository...
 git init
